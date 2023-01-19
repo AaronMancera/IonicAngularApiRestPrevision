@@ -1,0 +1,7 @@
+{
+  "name": "ApiRestPrevision",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
