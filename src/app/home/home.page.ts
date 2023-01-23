@@ -8,7 +8,7 @@ import { EstadoCielo, PrevisionTiempo } from '../model/PrevisionTiempo';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit{
-  estadosCielo:EstadoCielo[];
+  estadosCielo:Array<EstadoCielo> = new Array();
   municipio = "41091"
 
   constructor(private apiService: ApiServiceProvider) {
