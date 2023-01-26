@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { InterfaceMunicipio } from '../model/PrevisionTiempo';
 
 @Injectable()
 export class ApiServiceProvider {
@@ -30,4 +31,18 @@ export class ApiServiceProvider {
         return promise;
     }//end_getPrevision
 
+    getMunicipios(): Promise<any>{
+        let promise = new Promise<InterfaceMunicipio[]>((resolve, reject) => {
+            this.http.get('./assets/json/municipios.json').toPromise()
+                .then((data: any) => {
+                        resolve(data);
+                        //console.log("Municipios:");
+                        //console.log(data);
+                    })
+                    .catch((error: Error) => {
+                        reject(error.message);
+                    })
+                });
+        return promise;
+    }//end_getMunicipios
 }//end_class

@@ -89,3 +89,8 @@ export interface PrevisionTiempo {
   id: string;
   version: string;
 }
+export interface InterfaceMunicipio {
+  CODPROVINCIA: string;
+  CODMUNICIPIO: string;
+  MUNICIPIO: string;
+}
